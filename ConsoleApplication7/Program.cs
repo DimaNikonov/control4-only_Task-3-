@@ -10,8 +10,9 @@ namespace ConsoleApplication7
     {
         static void Main(string[] args)
         {
-            List<int> collection = new List<int> { 55, 14, 77 ,33, 23, 20, 13, 32 };
-            Console.WriteLine(string.Join(" ",collection.OrderBy(t=> collection.Max(x=>t/10))));
+            List<int> collection = new List<int> { 54, 55, 14, 77, 33,20, 23, 13, 32 };
+            Console.WriteLine(string.Join(" ", collection.OrderBy((t => collection.Max(x => t / 10))).ThenByDescending(t => collection.Min(y => t%10))));
+            
         }
     }
 }
